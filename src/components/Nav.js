@@ -12,14 +12,8 @@ function Nav() {
         </Logo>
 
         <NavbarRight>
-          <List>
-            <ListItem>About</ListItem>
-            <ListItem>Shop</ListItem>
-            <ListItem>Contact</ListItem>
-          </List>
-
           <CartBtn>
-            CART <ShoppingBagOutlined />
+            Cart <ShoppingBagOutlined />
           </CartBtn>
 
           <HamburgerMenu>
@@ -36,7 +30,7 @@ function Nav() {
 export default Nav;
 
 const Container = styled.header`
-  height: 70px;
+  background: #ede9d5;
 `;
 
 const Navbar = styled.nav`
@@ -45,85 +39,70 @@ const Navbar = styled.nav`
   align-items: center;
   color: #111;
   letter-spacing: 0.25px;
-  padding: 8px 0;
+  max-width: 1200px;
+  width: 90vw;
+  margin: 0 auto;
+  height: 86px;
 `;
 
 const NavbarRight = styled.div`
   display: flex;
-  gap: 64px;
-  justify-content: space-between;
+  gap: 32px;
+  justify-content: flex-end;
   align-items: center;
   flex: 0.4;
 `;
 
 const Logo = styled.div`
-  height: 70px;
-  flex: 0.6;
+  padding-top: 16px;
+  width: 96px;
+  height: 100px;
 `;
 
 const Image = styled.img`
-  width: 76px;
-  height: 70px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 `;
 
-const List = styled.ul`
-  display: flex;
-  gap: 32px;
-  text-transform: uppercase;
-  list-style: none;
-
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const ListItem = styled.li`
-  cursor: pointer;
-`;
-
 const HamburgerMenu = styled.div`
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   gap: 4px;
+  width: 40px;
   height: 40px;
   cursor: pointer;
 
   div:nth-child(1) {
-    width: 20px;
+    width: 24px;
   }
   div:nth-child(2) {
-    width: 32px;
+    width: 36px;
   }
 
   &:hover {
     div:nth-child(1) {
-      width: 28px;
-      transition: all 250ms ease-in-out;
+      width: 32px;
     }
 
     div:nth-child(2) {
-      width: 20px;
-      transition: all 250ms ease-in-out;
+      width: 24px;
     }
 
     div:nth-child(3) {
-      width: 32px;
-      transition: all 250ms ease-in-out;
+      width: 36px;
     }
-  }
-
-  @media only screen and (max-width: 768px) {
-    display: flex;
   }
 `;
 
 const Bar = styled.div`
-  width: 28px;
-  background: #111;
+  width: 32px;
+  background: #473c33;
   height: 4px;
+  transition: all 250ms ease-in-out;
+  border-radius: 4px;
 `;
 
 const CartBtn = styled.button`
@@ -133,18 +112,22 @@ const CartBtn = styled.button`
   height: 40px;
   cursor: pointer;
   gap: 4px;
-  background: rgba(255, 255, 255, 0.9);
+  width: 100px;
+  background: #473c33;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.5px;
+  font-weight: bold;
   padding: 8px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  border-radius: 16px;
+  border: 1px solid #473c33;
+  border-radius: 24px;
+  transition: all 250ms ease-in-out;
 
   .MuiSvgIcon-root {
     font-size: 20px !important;
-    color: #111;
+    color: rgba(255, 255, 255, 0.9);
   }
 
   &:hover {
-    background: rgba(255, 255, 255, 1);
-    transition: all 250ms ease-in-out;
+    opacity: 0.9;
   }
 `;
