@@ -11,7 +11,7 @@ function Intro() {
           <Text>
             <Heading>
               "Experience the Tranquility of Japanese Tea"
-              <SubHeading>From Tree to Teapot 🍃</SubHeading>
+              <SubHeading>From Tree to Teapot</SubHeading>
             </Heading>
             <LineSvg />
             <TextBottom>
