@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import about from "../assets/images/about.png";
+import matcha from "../assets/images/matcha.jpg";
 
 function About() {
   return (
@@ -8,7 +8,7 @@ function About() {
       <Heading>Why Infusion Oasis?</Heading>
       <Main>
         <ImageContainer>
-          <Image src={about} alt="about" />
+          <Image src={matcha} alt="about" />
           <OverlayText>
             timelessness. minimalism. experience. quality.{" "}
           </OverlayText>
@@ -35,6 +35,7 @@ const Main = styled.div`
 `;
 const Image = styled.img`
   width: 450px;
+  margin-top: 60px;
   height: auto;
   object-fit: cover;
   z-index: 1;
@@ -51,11 +52,18 @@ const Image = styled.img`
 const ImageContainer = styled.div`
   position: relative;
   margin-top: 64px;
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 32px;
+  }
+
+  @media only screen and (max-width: 425px) {
+    margin-top: 0px;
+  }
 `;
 
 const OverlayText = styled.span`
   position: absolute;
-  color: rgba(255, 255, 255, 1);
   font-weight: 600;
   font-size: 76px;
   letter-spacing: 1px;
@@ -64,16 +72,16 @@ const OverlayText = styled.span`
 
   @media only screen and (max-width: 768px) {
     font-size: 60px;
-    top: -104px;
+    top: -90px;
   }
 
   @media only screen and (max-width: 600px) {
     font-size: 48px;
-    top: -82px;
+    top: -62px;
   }
 
   @media only screen and (max-width: 425px) {
-    font-size: 36px;
-    top: -62px;
+    font-size: 34px;
+    top: -24px;
   }
 `;
