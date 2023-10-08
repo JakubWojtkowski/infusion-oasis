@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import Intro from "./Intro";
+import About from "./About";
 
 function Home() {
   return (
     <Container>
       <Wrapper>
         <Intro />
+        <About />
       </Wrapper>
     </Container>
   );

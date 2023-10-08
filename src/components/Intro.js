@@ -9,7 +9,7 @@ function Intro() {
         <Main>
           <Text>
             <Heading>
-              "Experience the Tranquility of Japanese Tea"
+              "Experience the Tranquility <br></br>of Japanese Tea"
               <Blob />
               <SubHeading>From Tree to Teapot</SubHeading>
             </Heading>
@@ -28,7 +28,7 @@ function Intro() {
             </TextBottom>
           </Text>
 
-          <ImageContent />
+          <ImageContent src={intro} alt="intro-image" />
         </Main>
       </Wrapper>
     </Container>
@@ -38,7 +38,7 @@ function Intro() {
 export default Intro;
 
 const Container = styled.div`
-  padding: 64px 0;
+  padding: 32px 0;
 `;
 
 const Wrapper = styled.div`
@@ -51,11 +51,10 @@ const Main = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: center;
-  justify-items: center;
 
   @media only screen and (max-width: 768px) {
     grid-template-columns: 1fr;
+    place-items: center;
   }
 `;
 
@@ -67,59 +66,82 @@ const Text = styled.div`
 const Blob = styled.div`
   position: absolute;
   background: #abc270;
-  width: 390px;
+  width: 400px;
   height: 112px;
   top: 0px;
-  left: 10px;
+  left: 0px;
   z-index: -1;
-  animation: animate 5s infinite ease-in-out;
+  animation: animate 2.5s infinite ease-in-out;
 
   @keyframes animate {
     0% {
-      border-radius: 20% 10% 40% 70%/60% 20% 80% 40%;
+      border-radius: 20% 20% 30% 70%/60% 40% 60% 40%;
     }
 
     50% {
-      border-radius: 30% 30% 70% 40%/50% 40% 50% 60%;
+      border-radius: 30% 40% 70% 40%/50% 40% 50% 60%;
     }
 
     100% {
-      border-radius: 20% 10% 40% 70%/60% 20% 80% 40%;
+      border-radius: 20% 20% 30% 70%/60% 40% 60% 40%;
     }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    width: 280px;
+    height: 112px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 368px;
+    height: 72px;
+    top: 0px;
+  }
+
+  @media only screen and (max-width: 425px) {
+    width: 232px;
+    height: 104px;
+    top: 6px;
   }
 `;
 
 const Heading = styled.h1`
-  color: #473c33;
   letter-spacing: 0.5px;
-  font-size: 2.75rem;
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
   margin-bottom: 60px;
   position: relative;
 `;
 
 const SubHeading = styled.p`
-  font-size: 2rem;
+  font-size: clamp(1.75rem, 3.5vw, 2rem);
   opacity: 0.5;
   z-index: 1;
 `;
 
 const TextBottom = styled.div`
-  width: 75%;
+  width: 77.5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Description = styled.p`
-  color: #473c33;
   opacity: 0.85;
   letter-spacing: 0.25px;
   line-height: 2;
-  font-size: 1rem;
+  font-size: clamp(1.05rem, 3.5vw, 1.1rem);
   text-align: justify;
   margin-bottom: 40px;
   z-index: 20;
+
+  @media only screen and (max-width: 768px) {
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+  }
 `;
 
 const Button = styled.button`
@@ -140,12 +162,10 @@ const Button = styled.button`
   }
 `;
 
-const ImageContent = styled.div`
-  background: url(${intro});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 20% 40% 30% 50%/60% 30% 70% 40%;
-  height: 100%;
+const ImageContent = styled.img`
+  border-radius: 30% 40% 30% 40%/60% 30% 70% 40%;
+  height: 70vh;
   width: 100%;
+  object-fit: cover;
+  scale: 0.75;
 `;
