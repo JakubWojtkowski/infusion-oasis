@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import intro from "../assets/images/intro.png";
-import { ReactComponent as LineSvg } from "../assets/images/LineSvg.svg";
 
 function Intro() {
   return (
@@ -11,15 +10,15 @@ function Intro() {
           <Text>
             <Heading>
               "Experience the Tranquility of Japanese Tea"
+              <Blob />
               <SubHeading>From Tree to Teapot</SubHeading>
             </Heading>
-            <LineSvg />
             <TextBottom>
               <Description>
                 Immerse yourself in the rich heritage of
                 <strong> Japanese </strong>tea, where every cup tells a story of
                 <strong> meticulous </strong>
-                craftsmanship and centuries-old<strong> traditions </strong>.
+                craftsmanship and centuries-old<strong> traditions</strong>.
                 Explore the exquisite flavors and <strong>healthful </strong>
                 qualities of our curated selection, ranging from the vibrant
                 notes of matcha to the soothing nuances of sencha and beyond.
@@ -63,12 +62,30 @@ const Main = styled.div`
 const Text = styled.div`
   position: relative;
   z-index: 1;
+`;
 
-  svg {
-    position: absolute;
-    transform: translate(24px, -272px);
-    scale: 1.25;
-    z-index: -1;
+const Blob = styled.div`
+  position: absolute;
+  background: #abc270;
+  width: 390px;
+  height: 112px;
+  top: 0px;
+  left: 10px;
+  z-index: -1;
+  animation: animate 5s infinite ease-in-out;
+
+  @keyframes animate {
+    0% {
+      border-radius: 20% 10% 40% 70%/60% 20% 80% 40%;
+    }
+
+    50% {
+      border-radius: 30% 30% 70% 40%/50% 40% 50% 60%;
+    }
+
+    100% {
+      border-radius: 20% 10% 40% 70%/60% 20% 80% 40%;
+    }
   }
 `;
 
@@ -77,9 +94,10 @@ const Heading = styled.h1`
   letter-spacing: 0.5px;
   font-size: 2.75rem;
   margin-bottom: 60px;
+  position: relative;
 `;
 
-const SubHeading = styled.h2`
+const SubHeading = styled.p`
   font-size: 2rem;
   opacity: 0.5;
   z-index: 1;
