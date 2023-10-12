@@ -181,8 +181,4 @@ const Button = styled.button`
   &:hover {
     opacity: 0.9;
   }
-
-  .MuiSvgIcon-root {
-    ${"" /* font-size: 20px !important; */}
-  }
 `;
