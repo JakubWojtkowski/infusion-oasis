@@ -25,13 +25,14 @@ const Container = styled.div`
 `;
 
 const Heading = styled.h2`
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 `;
 
 const Main = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 16px;
 `;
 const Image = styled.img`
   width: 450px;
