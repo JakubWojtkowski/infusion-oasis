@@ -1,8 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
+import { selectTea } from "../features/tea/teaSlice";
 import Item from "./Item";
 
 function Products() {
+  const tea = useSelector(selectTea);
+
   return (
     <Container>
       <Heading>Our Products</Heading>
@@ -14,9 +18,9 @@ function Products() {
         <MainContent>
           <Slider>
             <Items>
-              <Item />
-              <Item />
-              <Item />
+              {tea?.map((tea, index) => {
+                return <Item key={index} tea={tea} />;
+              })}
             </Items>
           </Slider>
         </MainContent>
