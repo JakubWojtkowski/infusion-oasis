@@ -1,25 +1,27 @@
 import React from "react";
 import styled from "styled-components";
-import matcha from "../assets/images/mockup5.png";
 import { AddShoppingCartOutlined } from "@mui/icons-material";
+import Fade from "react-reveal/Fade";
 
 function Item({ tea }) {
   return (
     <Container>
-      <ItemWrapper>
-        <ItemImage>
-          <img src={matcha} alt="" />
-        </ItemImage>
-        <ItemText>
-          <ItemName>{tea.name}</ItemName>
-          <ItemDesc>{tea.description}</ItemDesc>
-          <ItemPrice>${tea.price}</ItemPrice>
-          <Button>
-            Add To Cart
-            <AddShoppingCartOutlined />
-          </Button>
-        </ItemText>
-      </ItemWrapper>
+      <Fade bottom>
+        <ItemWrapper>
+          <ItemImage>
+            <img src={`/images/items/${tea.image}.png`} alt="tea" />
+          </ItemImage>
+          <ItemText>
+            <ItemName>{tea.name}</ItemName>
+            <ItemDesc>{tea.description}</ItemDesc>
+            <ItemPrice>${tea.price}</ItemPrice>
+            <Button>
+              Add To Cart
+              <AddShoppingCartOutlined />
+            </Button>
+          </ItemText>
+        </ItemWrapper>
+      </Fade>
     </Container>
   );
 }
@@ -41,19 +43,25 @@ const ItemImage = styled.div`
   img {
     border-radius: 8px;
     width: 100%;
-    max-height: 420px;
+    height: 400px;
     object-fit: cover;
   }
 
   @media only screen and (max-width: 1024px) {
     img {
-      max-height: 360px;
+      max-height: 340px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    img {
+      max-height: 240px;
     }
   }
 
   @media only screen and (max-width: 425px) {
     img {
-      max-height: 200px;
+      max-height: 190px;
     }
   }
 `;

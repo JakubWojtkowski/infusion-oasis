@@ -1,9 +1,19 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import logo from "../assets/images/logo.png";
-import { ShoppingBagOutlined } from "@mui/icons-material";
+import { Close, ShoppingBagOutlined } from "@mui/icons-material";
+import { useState } from "react";
 
 function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    isOpen === true
+      ? (document.body.style.overflowY = "")
+      : (document.body.style.overflowY = "hidden");
+    setIsOpen((current) => !current);
+  };
+
   return (
     <Container>
       <Navbar>
@@ -16,11 +26,22 @@ function Nav() {
             Cart <ShoppingBagOutlined />
           </CartBtn>
 
-          <HamburgerMenu>
+          <HamburgerMenu onClick={toggleMenu}>
             <Bar />
             <Bar />
             <Bar />
           </HamburgerMenu>
+
+          {isOpen && (
+            <Menu>
+              <Close onClick={toggleMenu} />
+              <MenuItems>
+                <MenuItem onClick={toggleMenu}>Products</MenuItem>
+                <MenuItem onClick={toggleMenu}>About Us</MenuItem>
+                <MenuItem onClick={toggleMenu}>Contact</MenuItem>
+              </MenuItems>
+            </Menu>
+          )}
         </NavbarRight>
       </Navbar>
     </Container>
@@ -28,6 +49,15 @@ function Nav() {
 }
 
 export default Nav;
+
+const fadeIn = keyframes`
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
 
 const Container = styled.header`
   background: #ede9d5;
@@ -129,5 +159,68 @@ const CartBtn = styled.button`
 
   &:hover {
     opacity: 0.9;
+  }
+`;
+
+const Menu = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #ede9d5;
+  right: 0;
+  width: 320px;
+  z-index: 11;
+  min-height: 100vh;
+  font-size: 24px;
+  animation: ${fadeIn} 350ms ease-in-out;
+
+  .MuiSvgIcon-root {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    margin: 32px;
+    font-size: 32px !important;
+    transition: all 350ms ease-in-out;
+
+    &:hover {
+      rotate: 180deg;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    width: 60%;
+  }
+`;
+
+const MenuItems = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`;
+
+const MenuItem = styled.li`
+  cursor: pointer;
+  position: relative;
+  color: #473c33;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: #473c33;
+    height: 3px;
+    border-radius: 8px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+
+  &:hover:after {
+    width: 100%;
   }
 `;

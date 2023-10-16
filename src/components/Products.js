@@ -44,6 +44,7 @@ const Main = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 24px;
+  position: relative;
 `;
 
 const Text = styled.div`
