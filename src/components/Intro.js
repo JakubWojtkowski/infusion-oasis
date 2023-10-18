@@ -108,7 +108,6 @@ const Blob = styled.div`
 const Heading = styled.h1`
   letter-spacing: 0.5px;
   font-size: clamp(1.85rem, 3.5vw, 2.75rem);
-  margin-bottom: 48px;
   position: relative;
 `;
 
@@ -116,6 +115,7 @@ const SubHeading = styled.p`
   font-size: clamp(1.75rem, 3.5vw, 2rem);
   opacity: 0.5;
   z-index: 1;
+  margin-bottom: 24px;
 `;
 
 const TextBottom = styled.div`
@@ -136,7 +136,7 @@ const Description = styled.p`
   line-height: 2;
   font-size: clamp(1.05rem, 3.5vw, 1.1rem);
   text-align: justify;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   z-index: 20;
 
   @media only screen and (max-width: 768px) {

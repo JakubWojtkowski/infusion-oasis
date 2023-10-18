@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./assets/index.css";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import { db } from "./firebase.config";
 import { collection, onSnapshot } from "firebase/firestore";
@@ -30,6 +31,7 @@ function App() {
     <div className="App">
       <Nav />
       <Home />
+      <Footer />
     </div>
   );
 }
