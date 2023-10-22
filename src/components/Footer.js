@@ -133,6 +133,7 @@ const Item = styled.a`
   cursor: pointer;
   font-size: clamp(0.85rem, 2.5vw, 1rem);
   text-align: center;
+  transition: all 250ms ease-in-out;
 
   &:hover {
     color: rgba(255, 255, 255, 0.7);
@@ -197,5 +198,10 @@ const Copyright = styled.span`
   .MuiSvgIcon-root {
     color: rgba(255, 255, 255, 0.9) !important;
     font-size: 14px;
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
   }
 `;
