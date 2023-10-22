@@ -12,7 +12,7 @@ import {
 function Footer() {
   return (
     <Container>
-      {/* <Wave /> */}
+      <Wave />
       <Wrapper>
         <Main>
           <LeftMain>
@@ -87,7 +87,7 @@ const Main = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
   grid-gap: 24px;
-  padding: 24px 24px;
+  padding: 12px 24px;
 
   @media only screen and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;

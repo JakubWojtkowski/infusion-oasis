@@ -21,7 +21,7 @@ function About() {
 export default About;
 
 const Container = styled.div`
-  padding: 64px 0;
+  padding: 64px 0 0 0;
 `;
 
 const Heading = styled.h2`
