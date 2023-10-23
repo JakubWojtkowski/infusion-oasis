@@ -71,9 +71,6 @@ export default Footer;
 const Container = styled.div`
   background: #473c33;
   color: rgba(255, 255, 255, 0.9);
-
-  svg {
-  }
 `;
 
 const Wrapper = styled.div`
