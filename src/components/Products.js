@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import styled from "styled-components";
 import { selectTea } from "../features/tea/teaSlice";
 import Item from "./Item";
+import MovingText from "./MovingText";
 
 function Products() {
   const tea = useSelector(selectTea);
@@ -25,6 +26,7 @@ function Products() {
           </Slider>
         </MainContent>
       </Main>
+      <MovingText />
     </Container>
   );
 }
