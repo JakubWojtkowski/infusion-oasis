@@ -8,7 +8,7 @@ function MovingText() {
         <path id="curve" d="M 0 120 C 0 120, 130, 0, 200, 120"></path>
         <text className="text" textAnchor="middle">
           <textPath className="text_path" href="#curve" startOffset="50%">
-            CurvedText
+            ANTIOXIDANT
           </textPath>
         </text>
       </svg>
@@ -17,7 +17,7 @@ function MovingText() {
         <path id="curve" d="M 0 120 C 0 120, 130, 0, 200, 120"></path>
         <text className="text" textAnchor="middle">
           <textPath className="text_path" href="#curve" startOffset="50%">
-            CurvedText2
+            HYDRATION
           </textPath>
         </text>
       </svg>
@@ -26,7 +26,7 @@ function MovingText() {
         <path id="curve" d="M 0 120 C 0 120, 130, 0, 200, 120"></path>
         <text className="text" textAnchor="middle">
           <textPath className="text_path" href="#curve" startOffset="50%">
-            CurvedText3
+            LOW CALORIES
           </textPath>
         </text>
       </svg>
@@ -35,7 +35,7 @@ function MovingText() {
         <path id="curve" d="M 0 120 C 0 120, 130, 0, 200, 120"></path>
         <text className="text" textAnchor="middle">
           <textPath className="text_path" href="#curve" startOffset="50%">
-            CurvedText4
+            FOCUS
           </textPath>
         </text>
       </svg>
@@ -44,7 +44,7 @@ function MovingText() {
         <path id="curve" d="M 0 120 C 0 120, 130, 0, 200, 120"></path>
         <text className="text" textAnchor="middle">
           <textPath className="text_path" href="#curve" startOffset="50%">
-            CurvedText4
+            HEART HEALTH
           </textPath>
         </text>
       </svg>
@@ -64,14 +64,4 @@ const Container = styled.div`
   margin-top: 64px;
   padding: 0 16px;
   font-size: 24px;
-
-  p {
-    letter-spacing: 1.5px;
-    font-size: clamp(0.3rem, 1.5vw, 1.5rem);
-    -webkit-transform: rotate(5deg);
-  }
-
-  p:nth-child(2n) {
-    -webkit-transform: rotate(-5deg);
-  }
 `;
