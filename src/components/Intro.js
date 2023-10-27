@@ -16,12 +16,13 @@ function Intro() {
             <TextBottom>
               <Description>
                 Immerse yourself in the rich heritage of
-                <strong> Japanese </strong>tea, where every cup tells a story of
-                <strong> meticulous </strong>
-                craftsmanship and centuries-old<strong> traditions</strong>.
-                Explore the exquisite flavors and <strong>healthful </strong>
-                qualities of our curated selection, ranging from the vibrant
-                notes of matcha to the soothing nuances of sencha and beyond.
+                <strong> Japanese </strong>tea, where every cup tells a story of{" "}
+                <strong> meticulous </strong>craftsmanship and centuries-old
+                <strong> traditions</strong>. Explore the exquisite flavors and{" "}
+                <strong>healthful </strong>
+                qualities of our curated selection. Elevate your tea rituals,
+                <strong> experience</strong> the tranquility of ancient
+                traditions.
               </Description>
 
               <Button>Shop Now</Button>
@@ -134,14 +135,10 @@ const Description = styled.p`
   opacity: 0.85;
   letter-spacing: 0.25px;
   line-height: 2;
-  font-size: clamp(1.05rem, 3.5vw, 1.1rem);
+  font-size: 1.2rem;
   text-align: justify;
   margin-bottom: 24px;
   z-index: 20;
-
-  @media only screen and (max-width: 768px) {
-    font-size: clamp(1rem, 3.5vw, 1.2rem);
-  }
 `;
 
 const Button = styled.button`
@@ -164,7 +161,7 @@ const Button = styled.button`
 
 const ImageContent = styled.img`
   border-radius: 30% 40% 30% 40%/60% 30% 70% 40%;
-  height: 70vh;
+  max-height: 55vh;
   width: 100%;
   object-fit: cover;
   scale: 0.75;

@@ -1,0 +1,8 @@
+<svg width="200" height="120">
+          <path id="curve" d="M 0 120 C 0 120, 130, 0, 200, 120"></path>
+          <text className="text" textAnchor="middle" >
+            <textPath className="text_path" href="#curve" startOffset="50%">
+              RELAXATION
+            </textPath>
+          </text>
+</svg>

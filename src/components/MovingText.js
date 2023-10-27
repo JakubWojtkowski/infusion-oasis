@@ -1,55 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import { ReactComponent as SliderSvg } from "../assets/images/slider.svg";
+import { ReactComponent as SliderSvg1 } from "../assets/images/slider1.svg";
+import { ReactComponent as SliderSvg2 } from "../assets/images/slider2.svg";
+import { ReactComponent as SliderSvg3 } from "../assets/images/slider3.svg";
+import { ReactComponent as SliderSvg4 } from "../assets/images/slider4.svg";
+import Marquee from "react-fast-marquee";
 
 function MovingText() {
   return (
     <Container>
-      <svg width="200" height="120">
-        <path id="curve" d="M 0 120 C 0 120, 130, 0, 200, 120"></path>
-        <text className="text" textAnchor="middle">
-          <textPath className="text_path" href="#curve" startOffset="50%">
-            ANTIOXIDANT
-          </textPath>
-        </text>
-      </svg>
-      ·
-      <svg width="200" height="120">
-        <path id="curve" d="M 0 120 C 0 120, 130, 0, 200, 120"></path>
-        <text className="text" textAnchor="middle">
-          <textPath className="text_path" href="#curve" startOffset="50%">
-            HYDRATION
-          </textPath>
-        </text>
-      </svg>
-      ·
-      <svg width="200" height="120">
-        <path id="curve" d="M 0 120 C 0 120, 130, 0, 200, 120"></path>
-        <text className="text" textAnchor="middle">
-          <textPath className="text_path" href="#curve" startOffset="50%">
-            LOW CALORIES
-          </textPath>
-        </text>
-      </svg>
-      ·
-      <svg width="200" height="120">
-        <path id="curve" d="M 0 120 C 0 120, 130, 0, 200, 120"></path>
-        <text className="text" textAnchor="middle">
-          <textPath className="text_path" href="#curve" startOffset="50%">
-            FOCUS
-          </textPath>
-        </text>
-      </svg>
-      ·
-      <svg width="200" height="120">
-        <path id="curve" d="M 0 120 C 0 120, 130, 0, 200, 120"></path>
-        <text className="text" textAnchor="middle">
-          <textPath className="text_path" href="#curve" startOffset="50%">
-            HEART HEALTH
-          </textPath>
-        </text>
-      </svg>
-      {/* <p>NATURAL ANTIOXIDANT</p>·<p>HYDRATION</p>·<p>LOW CALORIES</p>·
-      <p>FOCUS</p>·<p>HEART HEALTH</p> */}
+      <Marquee autoFill={true}>
+        <SliderSvg />.
+        <SliderSvg1 />.
+        <SliderSvg2 />.
+        <SliderSvg3 />.
+        <SliderSvg4 />.
+      </Marquee>
     </Container>
   );
 }
