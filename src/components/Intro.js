@@ -120,7 +120,7 @@ const SubHeading = styled.p`
 `;
 
 const TextBottom = styled.div`
-  width: 77.5%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -161,7 +161,7 @@ const Button = styled.button`
 
 const ImageContent = styled.img`
   border-radius: 30% 40% 30% 40%/60% 30% 70% 40%;
-  max-height: 55vh;
+  max-height: 60vh;
   width: 100%;
   object-fit: cover;
   scale: 0.75;
